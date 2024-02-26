@@ -1,0 +1,41 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Mon Jan 29 03:46:04 2024
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/cs-root     /                       xfs     defaults        0 0
+UUID=a1bea7bb-56f0-4d83-a64f-1f665b2a2ca2 /boot                   xfs     defaults        0 0
+/dev/mapper/cs-home     /home                   xfs     defaults        0 0
+/dev/mapper/cs-swap     none                    swap    defaults        0 0
+#/dev/sdb1		/testmount		xfs 	defaults	0 0
+
+#/dev/vg1/lvm1            /lvm1                   ext4    defaults        1 2
+#/dev/vg1/lvm2            /lvm2                   ext4    defaults        1 2
+#/dev/vg2/lvm3            /lvm3                   ext4    defaults        1 2
+#/dev/vg2/lvm4            /lvm4                   ext4    defaults        1 2
+
+# 
+
+#/dev/md0	   	  /raid0 		  ext4 	  defaults	  0 2
+#/dev/md1	          /raid1	          ext4    defaults   	  0 2
+#/dev/md5		  /raid5		  ext4    defaults	  0 2
+
+#(5) swap configuration
+
+#/swap/swapfile		  none		   	  swap    defaults	  0 0
+#/dev/sdb1		  none			  swap    defaults 	  0 0
+#/dev/cs/sawp2	          none	 	 	  swap    defaults 	  0 0
+
+#(6) SMB Mount configuration
+#//192.168.10.202/share	/mnt/server	 cifs	  credentials=/root/credentials/smb.txt	0 0
+
+
+#(7)
+
+#UUID="925ba99e-0a8b-4292-a7be-cfffb1b2f53b" 	/vo1	xfs	x-systemd.requires=stratisd.service 0 0
